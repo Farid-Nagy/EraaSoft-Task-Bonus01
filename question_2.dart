@@ -1,5 +1,8 @@
+import 'dart:io';
+
 void main() {
-  int x = 4568;
+  stdout.write("Enter X: ");
+  int x = int.parse(stdin.readLineSync()!);
 
   int firstDigit = x ~/ 1000;
 

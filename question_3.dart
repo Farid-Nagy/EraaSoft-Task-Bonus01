@@ -1,9 +1,12 @@
+import 'dart:io';
+
 void main() {
-  int n = 121;
+  stdout.write("Enter N: ");
+  int n = int.parse(stdin.readLineSync()!);
 
   while (n > 0) {
     int digit = n % 10;
-    print(digit);
+    stdout.write("$digit ");
     n ~/= 10;
   }
 }

@@ -1,12 +1,20 @@
-void main() {
-  int a = 12;
-  int b = 8;
+import 'dart:io';
 
-  while (b != 0) {
-    int temp = b;
-    b = a % b;
-    a = temp;
+void main() {
+  stdout.write("Enter A: ");
+  int a = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter B: ");
+  int b = int.parse(stdin.readLineSync()!);
+
+  int gcd = 1;
+  int minValue = (a < b) ? a : b;
+
+  for (int i = 1; i <= minValue; i++) {
+    if (a % i == 0 && b % i == 0) {
+      gcd = i;
+    }
   }
 
-  print(a); // GCD
+  print(gcd);
 }
